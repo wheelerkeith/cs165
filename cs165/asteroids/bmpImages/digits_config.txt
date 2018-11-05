@@ -1,0 +1,3 @@
+bmpImages/digits1.bmp
+1 5 17 24
+0 10 17 24

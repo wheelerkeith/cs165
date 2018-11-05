@@ -1,0 +1,532 @@
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDir30b5b425-d944-4e81-9132-27fd60a6aefb/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDir95e1eb74-4ff0-4fc6-9d7c-70d2653710a8/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDir0ec7841b-6e6a-4171-bcf2-e8b70d7fa765/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDir09ae06bf-65c8-4f11-8d58-3553de694577/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDirdd2324eb-3505-49fb-aa36-2dd841bee73e/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDir409b4174-033b-4431-9e60-f558fcd0b354/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDire398b743-c5f8-4dee-affe-6902fd979636/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDir79d5fd58-088c-48a1-99ec-3f954dfb70ab/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDirb4500594-c404-4ad5-a16e-5b19fe49be58/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDird3b6b2b2-74f4-4432-b18f-cd4b2987a28a/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDir090d1c97-5de6-4871-bee5-4387ab93b2f4/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDir8ba287e9-064c-48c7-8c4d-de8f6fb000fa/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDir1c7ed476-4bae-468a-8dbd-5de31df8c6a6/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDir34fab2aa-8bc0-49d7-abf1-f34092d76ed3/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDir0a646c24-076e-476a-a079-14409700ab9c/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDirb8c63d8d-8acd-4e9d-9360-9417a3bd647b/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDirac59b33e-c56b-4b55-a471-1f5c22738118/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDir4732c742-8c07-4943-8a7e-d587660b718a/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDirfc8f3aa2-d54b-4b4c-8a03-d7bd607a33b9/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDir474dd3a8-2b70-4866-bc13-fa40ea074f10/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDir8b24242f-9f7a-4eb2-b952-a14cc15de0ef/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDir26de031f-a15c-4d56-a6c8-70a569c96090/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDir52e3554d-34f3-4b74-8727-b45392332aec/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDir81cb8b3a-1aa4-463b-9c1e-fa0bb12ed926/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDir508c2bde-8b7e-4f87-bb1d-6b81cfcbad6e/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDire3b658a8-c5f8-4767-a0b3-911f764d4458/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDira2187a78-cf30-4ff0-8b22-ef56f23e0a5f/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 
+
+# mkdir assign27.tar.dir 2>> assign27.compile 
+
+# cp assign27.tar assign27.tar.dir/tar.tar 2>> assign27.compile 
+
+# tar -xf  assign27.tar.dir/tar.tar -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+
+# make a.out -C assign27.tar.dir 2>> assign27.compile >> assign27.compile 
+make: Entering directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+g++ -c assign27.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -o a.out assign27.o point.o velocity.o
+tar -j -cf assign27.tar *.h *.cpp makefile
+make: Leaving directory `/home/whe10002/cs165/a27/assign27.tar.dir'
+
+# mv assign27.tar.dir/a.out /tmp/testbed/compileDir52a5ecc6-6799-49bf-9bd1-6e885e5b494f/assign27 2>> assign27.compile >> assign27.compile 
+
+# rm -rf assign27.tar.dir 2>> assign27.compile 

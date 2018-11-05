@@ -1,0 +1,22 @@
+
+# mkdir project3.tar.dir 2>> project3.compile 
+
+# cp project3.tar project3.tar.dir/tar.tar 2>> project3.compile 
+
+# tar -xf  project3.tar.dir/tar.tar -C project3.tar.dir 2>> project3.compile >> project3.compile 
+
+# make a.out -C project3.tar.dir 2>> project3.compile >> project3.compile 
+make: Entering directory `/home/whe10002/cs165/p3/project3.tar.dir'
+g++ -c game.cpp
+g++ -c uiInteract.cpp
+g++ -c uiDraw.cpp
+g++ -c point.cpp
+g++ -c velocity.cpp
+g++ -c rifle.cpp
+g++ -o a.out game.o uiInteract.o uiDraw.o point.o velocity.o rifle.o -lGL -lglut -lGLU
+tar -j -cf project3.tar makefile *.h *.cpp
+make: Leaving directory `/home/whe10002/cs165/p3/project3.tar.dir'
+
+# mv project3.tar.dir/a.out /tmp/testbed/compileDir0e99d8a7-0698-4999-95fd-c73b538c25b0/project3 2>> project3.compile >> project3.compile 
+
+# rm -rf project3.tar.dir 2>> project3.compile 

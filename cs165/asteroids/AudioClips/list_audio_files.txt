@@ -1,0 +1,5 @@
+AudioClips/laser.wav
+AudioClips/zap1.wav
+AudioClips/explosion.wav
+AudioClips/levelBK3.wav
+AudioClips/levelBK1.wav
