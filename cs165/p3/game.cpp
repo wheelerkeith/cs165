@@ -8,11 +8,14 @@
  *    textbook.
  ************************************************************************/
 
+#include "ship.h"
 #include "uiDraw.h"
 #include "uiInteract.h"
 #include "point.h"
-#include "rifle.h"
-#include "moveable.h"
+#include <vector>
+#include <list>
+
+using namespace std;
 
 /*****************************************
  * GAME
@@ -31,36 +34,28 @@ public:
    void advance();
          
    // draw stuff
-   void draw(const Interface & ui) const;
-   
-   int getNumBullets()
-   {
-     return numBullets;
-   };
-   
-   void setNumBullets(int add)
-   {
-     numBullets += add;
-   };
-   
-   bool getHit() { return hit; };
-   void setHit(bool t) { hit = t; }
+   void draw(const Interface & ui);
    
 private:
    
-   bool gameOver;
-   Rifle rifle;
-   int numBullets;
-   Bird *bird;
-   bool hit;
-   int miss;
-   int score;
-   
-   // TODO - REQUIREMENT for this project!!!!
-   //      - you must use/have a pointer to a bird object
-   //      - Ie., Bird *bird;
+   // Sample code on how to use a vector
+   // delete it if you don't need it
+   vector<Point> points;
 
+   bool gameOver;
+   Ship ship;
+   int rotate;
+   bool up;
+   bool down;
+   bool left;
+   bool right;
+   
+   // TODO: Create ship, bullets and rocks
    // TODO: add any objects or variables that are required
+
+   void detectHits();
+   void removeDeadObjects();
+
 };
 
 /***************************************
@@ -69,7 +64,11 @@ private:
 void Game :: advance()
 {
    // TODO: advance anything that moves
-   // TODO: decide if anything died, the game is over, etc...
+
+   // Decide if anything died, the game is over, etc...
+   detectHits();
+
+   // TODO - is the game over? or did the user shot all of the rocks?
 }
 
 /***************************************
@@ -79,35 +78,95 @@ void Game :: advance()
 void Game :: input(const Interface & ui)
 {
    // TODO: handle user input
+   
+   ship.move(ui.isUp(), ui.isDown(), ui.isLeft(), ui.isRight(), rotate);
 
    // Note that you can discover keys that were pressed by checking
    // methods such as ui.isUp(), ui.isLeft(), etc.
    // see Pong for an example
 
-   // Move the the rifle
-   rifle.move(ui.isRight(), ui.isLeft());
-   // If space is pressed, create a bullet
-   if (ui.isSpace() && getNumBullets() <= 5)
-   {
-     new Bullet();
-     setNumBullets(1);
-   }
+/*  // Vector example
+  if (ui.isUp())
+  {
+    // create 10 random points and add them to the vector
+    for (int i = 0; i < 10; i++)
+    {
+      points.push_back(Point(random(Point::xMin, Point::xMax), random(Point::xMin, Point::xMax)));
+    }
+  }
+
+  if (ui.isDown() && (points.size() > 0))
+  {
+    // go through all points and kill some of them
+    // Notice that the For loop doesn't increment "it" in the normal place 
+    for (vector<Point>::iterator it = points.begin(); it != points.end();)
+    {
+      // delete some random points
+      if (random(1, 10) == 5)
+      {
+	// When you delete a point, don't move the iterator
+	it = points.erase(it);
+      }
+      else
+      {
+        // Move to the next point in the vector
+	++it;
+      }
+    }
+  }*/
 }
 
 /*********************************************
  * GAME :: DRAW
  * Draw everything on the screen
  *********************************************/
-void Game :: draw(const Interface & ui) const
+void Game :: draw(const Interface & ui)
 {
-	// display the rifle
-   	rifle.draw();
-
     // TODO: draw anything you need to display in the game
+    ship.draw(rotate);
 
+ /* // Vector example
+  Point pt(-50, 0);
+  drawText(pt, "Press UP and DOWN");
+
+  string str = "Point count = " + convertIntToString(points.size());
+  pt.addY(-20);
+  drawText(pt, str.c_str());
+
+  // draw all of the points
+  for (vector<Point>::iterator it = points.begin(); it != points.end(); ++it)
+  {
+    drawDot(*it);
+  }*/
 }
 
-#define X_SIZE       400
+/*********************************************
+ * GAME :: detectHits
+ * Detect any rocks hitting bullets and ship and make them "dead"
+ * Note: decide if the game is over here
+ *********************************************/
+void Game::detectHits()
+{
+  // did any bullets hit a rock?
+
+  // did the ship hit a rock?
+
+  // remove the dead
+  removeDeadObjects();
+}
+
+/*********************************************
+ * GAME :: removeDeadObjects
+ * remove any "dead" rocks, bullets, etc...
+ *********************************************/
+void Game::removeDeadObjects()
+{
+  // TODO: Remove any dead objects (ie., rocks, bullets, etc...)
+
+  // TODO: Create any new rocks (Large rock -> mid rock and mid -> small)
+}
+
+#define X_SIZE       600
 
 /*************************************
  * All the interesting work happens here, when
@@ -128,8 +187,8 @@ void callBack(const Interface *pUI, void *p)
 // set the bounds of the drawing rectangle
 float Point::xMin = -(X_SIZE / 2.0);
 float Point::xMax =  (X_SIZE / 2.0);
-float Point::yMin = -200.0;
-float Point::yMax =  200.0;
+float Point::yMin = -300.0;
+float Point::yMax =  300.0;
 
 /*********************************
  * Main is pretty sparse.  Just initialize
@@ -138,7 +197,7 @@ float Point::yMax =  200.0;
  *********************************/
 int main(int argc, char ** argv)
 {
-   Interface ui(argc, argv, "Skeet");
+   Interface ui(argc, argv, "Asteroids");
    Game game;
    ui.run(callBack, &game);
    

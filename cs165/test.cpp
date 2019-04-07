@@ -1,0 +1,32 @@
+// read a file into memory
+#include <iostream>     // std::cout
+#include <fstream>      // std::ifstream
+#include <string>
+using namespace std;
+
+int main ()
+{
+   string filename;
+   cout << "Enter the name of the file: ";
+   cin >> filename;
+   
+   std::ifstream is (filename.c_str(), std::ifstream::binary);
+   if (is)
+   {
+      // get length of file:
+      is.seekg (0, is.end);
+      int length = is.tellg();
+      is.seekg (0, is.beg);
+      
+      string buffer = new string [length];
+      
+      //   read data as a block:
+      is.read (buffer,length);
+      
+      for (int i = length; i > 0; i--)
+         std::cout << buffer[i];
+      
+      delete[] buffer;
+   }
+   return 0;
+}

@@ -10,8 +10,6 @@
 #ifndef MOVEABLE_H
 #define MOVEABLE_H 
 #include "velocity.h"
-#include "bird.h"
-#include "bullet.h"
 
 /**************************************
  * Moveable
@@ -24,18 +22,23 @@ public:
    virtual void draw() = 0;
    virtual void advance() = 0;
    virtual void getScore() = 0;
-   bool getDead()
+   bool isDead()
    {
      return dead;
    };
+   void setDead(bool death)
+   {
+     dead = death;
+   }
+
+
    Velocity getVelocity()
    {
      return Move;
    };
-private:
-   Velocity Move;                          // Velocity of the Moveable
 protected:
+   Velocity Move;                          // Velocity of the Moveable
    bool dead;   
 };
 
-#endif // RIFLE_H
+#endif // MOVEABLE_H

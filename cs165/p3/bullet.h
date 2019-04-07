@@ -1,31 +1,30 @@
 /***********************************************************************
  * Header File:
- *    Rifle : A gun
+ *    Bullet: comes out of gun
  * Author:
  *    Br. Helfrich
  * Summary:
- *    The class definition and associated constants for a Rifle.  
+ *    The class definition and associated constants.  
  ************************************************************************/
 
-#ifndef RIFLE_H
-#define RIFLE_H
+#include "moveable.h"
 
-// length of the rifle
-#define LENGTH_RIFLE 20 
+#ifndef BULLET_H
+#define BULLET_H
 
 /**************************************
- * RIFLE
- * Where the rifle is pointing and stuff
+ * Bullet
+ * will create and advance a bullet
+ * on the screen.
  **************************************/
-class Rifle
+class Bullet : public Moveable
 {
 public:
-   Rifle() : angle(45) {}              // rifle pointed neutrally by default
-   void move(int up, int down);        // move the rifle up or down
-   void draw()     const;              // draw the rifle at the current angle
-   int  getAngle() const { return angle; }
-private:
-   int angle;                          // angles between 0 .. 90
+   Bullet() {}
+   void draw()     const;
+   void advance();
+   void kill();
+   void fire(Rifle & rifle);
 };
 
-#endif // RIFLE_H
+#endif // BULLET_H

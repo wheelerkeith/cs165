@@ -10,49 +10,50 @@
 
 #include <cassert>
 
-#include "point.h"
 #include "uiDraw.h"
-#include "rifle.h"
+#include "bullet.h"
 
-/*****************************************
- * RIFLE : DRAW
- * Draw the rifle in the bottom right corner
- *****************************************/
-void Rifle::draw() const
+Bullet::Bullet()
 {
-   // make the point static so we don't have to chagne it.
-   static const Point point;
-   Point corner(point.getXMax(), point.getYMin());
+   kill();
    
-   drawRect(corner /* position */, 
-            5 /* width */, 
-            40 /* height */, 
-            90 - angle);
-   
-   assert(angle >= 0 && angle <= 90);
+   position.setCheck(true);
 }
 
-/*******************************************
- * RIFLE : MOVE
- * Move the rifle up or down
- *****************************************/
-void Rifle::move(int up, int down)
+void Bullet::draw() const
 {
-   // make sure we get rational data from the caller
-   assert(up >= 0 && down >= 0);
+   if (isDead())
+      return;
    
-   // adjust the angle, taking key acceleration into account
-   if (up)
-      angle += (up   + 9) / 5;
-   if (down)
-      angle -= (down + 5) / 5;
+   drawDot(Point(position.getX(), position.getY());
+}
+
+
+void Bullet::advance()
+{
+   if (isDead())
+      return;
+      
+   position.advance();
    
-   // make sure the rifle does not point some crazy way
-   if (angle > 90)
-      angle = 90;
-   if (angle < 0)
-      angle = 0;
+   if (position.isDead())
+      kill();
+}
+
+void Bullet::kill()
+{
+   position.setDead(true);
+}
+
+
+void Bullet::fire(Rifle & rifle)
+{
+   // finds rifles position
+   position.setX(position.getXMax() - 1);
+   position.setY(position.getYmin() + 1);
    
-   // make sure it is rational
-   assert(angle >= 0 && angle <= 90);
+   // fires from the rifle
+   position.setDx(-cos(deg2rad((float)rifle.getAngle())) * SPEED);
+   position.setDy( sin(deg2rad((float)rifle.getAngle())) * SPEED);
+   position.setDead(true);  // not loaded
 }

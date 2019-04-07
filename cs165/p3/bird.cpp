@@ -12,47 +12,78 @@
 
 #include "point.h"
 #include "uiDraw.h"
-#include "rifle.h"
+#include "bird.h"
 
-/*****************************************
- * RIFLE : DRAW
- * Draw the rifle in the bottom right corner
- *****************************************/
-void Rifle::draw() const
+
+Bird::Bird()
 {
-   // make the point static so we don't have to chagne it.
-   static const Point point;
-   Point corner(point.getXMax(), point.getYMin());
+   position.setX(position.getXMin());
+   position.setY(random(position.getXMin(), position.getXMax()));
    
-   drawRect(corner /* position */, 
-            5 /* width */, 
-            40 /* height */, 
-            90 - angle);
-   
-   assert(angle >= 0 && angle <= 90);
+   position.setDx(random(3.0, 6.0));
+   if (position.getY() > 0)         
+      position.setDy(random(-4.0, 0.0)); 
+   else                             
+      position.setDy(random(0.0, 4.0));
 }
 
-/*******************************************
- * RIFLE : MOVE
- * Move the rifle up or down
- *****************************************/
-void Rifle::move(int up, int down)
+void Bird::advance()
 {
-   // make sure we get rational data from the caller
-   assert(up >= 0 && down >= 0);
+   if (position.getDx() == 0)
+      respawn();
    
-   // adjust the angle, taking key acceleration into account
-   if (up)
-      angle += (up   + 9) / 5;
-   if (down)
-      angle -= (down + 5) / 5;
+   position.advance();
+}
+
+bool Bird::isOutside()
+{
+   int padding = random(50, 100); //For neatness; doesn't disappear instantly
+
+   //Out of bounds?
+   return (
+         (position.getX() > position.getXMax() + padding) ||
+         (position.getY() > position.getYMax() + padding) ||
+         (position.getY() < position.getYMin() - padding)
+   );
+}
+
+void Bird::respawn()
+{
+   //Reset position
+   position.setX(position.getXMin());                               //Left side
+   position.setY(random(position.getXMin(), position.getXMax()));   //Random
+
+   //Set dx, dy
+   position.setDx(random(3.0, 6.0));
+   if (position.getY() > 0)         //Upper half of the screen
+      position.setDy(random(-4.0, 0.0)); 
+   else                             //Lower half of the screen
+      position.setDy(random(0.0, 4.0));
+
+   return;
+}
+
+void Normal::draw() const
+{
+   int x = position.getX();
+   int y = position.getY();
    
-   // make sure the rifle does not point some crazy way
-   if (angle > 90)
-      angle = 90;
-   if (angle < 0)
-      angle = 0;
+   drawCircle(Point(x, y), BIRD_SIZE, BIRD_SIZE, 0);
+}
+
+void Tough::draw() const
+{
+   int x = position.getX();
+   int y = position.getY();
    
-   // make sure it is rational
-   assert(angle >= 0 && angle <= 90);
+   drawCircle(Point(x, y), BIRD_SIZE, BIRD_SIZE, 0);
+   drawNumber(Point(x, y), 3);
+}
+
+void Safe::draw() const
+{
+   int x = position.getX();
+   int y = position.getY();
+   
+   drawStar(Point(x, y), BIRD_SIZE, 0);
 }

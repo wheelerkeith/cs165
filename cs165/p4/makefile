@@ -3,7 +3,7 @@
 #     Project 04, Asteroids
 #     Brother Comeau, CS165
 # Author:
-#     author
+#     Keith Wheeler
 # Summary:
 #     Enter a brief description of your program here! If you do any
 #     extra credit, this would be a good place to describe it.
@@ -25,8 +25,8 @@ ARCHIVE   = $(PACKAGE)-$(VERSION)
 # Programs:
 #    moon:         The moon lander game
 ###############################################################
-a.out: game.o uiInteract.o uiDraw.o point.o velocity.o
-	g++ -o a.out game.o uiInteract.o uiDraw.o point.o velocity.o $(LFLAGS)
+a.out: game.o uiInteract.o uiDraw.o point.o velocity.o ship.o
+	g++ -o a.out game.o uiInteract.o uiDraw.o point.o velocity.o ship.o $(LFLAGS)
 	tar -j -cf project4.tar makefile *.h *.cpp
 
 ###############################################################
@@ -52,6 +52,9 @@ velocity.o: velocity.cpp velocity.h point.h
 
 point.o: point.cpp point.h
 	g++ -c point.cpp
+
+ship.o: ship.h ship.cpp
+	g++ -c ship.cpp
 
 ###############################################################
 # General rules

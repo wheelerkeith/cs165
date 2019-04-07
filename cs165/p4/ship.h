@@ -1,14 +1,3 @@
-/***********************************************************************
- * Header File:
- *    Point : The representation of a position on the screen
- * Author:
- *    Br. Helfrich
- * Summary:
- *    Everything we need to know about a location on the screen, including
- *    the location and the bounds.
- ************************************************************************/
-
-
 #ifndef SHIP_H
 #define SHIP_H
 
@@ -29,20 +18,26 @@ public:
       drawShip(pos, rotate);
    }
 
-   void move(int up, int down, int left, int right, int rotate)
+   void move(int up, int down, int left, int right, int &rotate)
    {
-      const float PI = 3.14159f;
+      float dx = 0;
+      float dy = 0;
       if (left)
-      {
-         pos
          rotate += (left + 9) / 5;
-      }
       if (right)
+         rotate -= (right + 9) / 5;
+      if (up)
       {
-         rotate += (right + 9) / 5;
+         dx += up*sin(M_PI*rotate/180.0);
+         dy += up*cos(M_PI*rotate/180.0);
       }
+      if (down)
+      {
+      }
+      destruction.addX(dx);
+      destruction.addY(dy);
    }
-   
+
    void rotate()
    {
       

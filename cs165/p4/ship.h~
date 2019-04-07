@@ -1,0 +1,54 @@
+/***********************************************************************
+ * Header File:
+ *    Point : The representation of a position on the screen
+ * Author:
+ *    Br. Helfrich
+ * Summary:
+ *    Everything we need to know about a location on the screen, including
+ *    the location and the bounds.
+ ************************************************************************/
+
+
+#ifndef SHIP_H
+#define SHIP_H
+
+#include <cmath>
+#include <iostream>
+#include "uiDraw.h"
+#include "point.h"
+#include "velocity.h"
+
+
+class Ship
+{
+public:
+   // constructors
+   inline void draw(int rotate)
+   {
+      Point pos = destruction.getPoint();
+      drawShip(pos, rotate);
+   }
+
+   void move(bool up, bool down, bool left, bool right, int &rotate)
+   {
+      if (up)
+         destruction.setY(9);
+   }
+   
+   void rotate()
+   {
+      
+   }
+
+   // getters
+
+
+   // setters
+
+
+private:
+   Velocity destruction;
+   Point pos;
+
+};
+#endif // SHIP_H

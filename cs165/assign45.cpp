@@ -1,9 +1,9 @@
 /***********************************************************************
 * Program:
 *    Assignment 45, Iterators
-*    Brother Helfrich, CS165
+*    Brother Comeau, CS165
 * Author:
-*    your name
+*    Keith Wheeler
 * Summary: 
 *    This program is designed to demonstrate using iterators to walk
 *    through a container or collection of elements.
@@ -30,8 +30,8 @@ int main()
 
    // display the text using the array notation
    cout << "Array:    ";
-   for (unsigned i = 0; i <= text.length(); i++)
-      cout << text[i];
+   for (unsigned i = 0; i < text.size(); i++)
+       cout << text[i];
    cout << endl;
    
    // display the text using the pointer notation

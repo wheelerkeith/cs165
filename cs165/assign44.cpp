@@ -23,7 +23,7 @@ using namespace std;
 template <typename T>
 struct Node
 {
-   string  data;
+   T  data;
    Node * pNext;
 };
 
@@ -52,7 +52,7 @@ void removeFromHead(Node<T> * & pHead)
  * REMOVE
  * Remove a node from the list
  *************************************/
-template <class T>
+template <typename T>
 void remove(Node<T> * pPrevious)
 {
    // 0. if the list is empty or there is just one item, use removeFromHead
@@ -73,8 +73,8 @@ void remove(Node<T> * pPrevious)
  * ADD TO HEAD
  * Add a new node to the head of the linked list
  **************************************/
-template <class T>
-void addToHead(Node<T> * & pHead, string data)
+template <typename T>
+void addToHead(Node<T> * & pHead, T data)
 {
    // 1. allocate and initialize create a new node
    Node<T> * pNew = new Node<T>;               // allocate the node
@@ -91,8 +91,8 @@ void addToHead(Node<T> * & pHead, string data)
  * ADD
  * Add an item to a linked list
  *************************************/
-template <class T>
-void add(Node<T> * pNode, string data)
+template <typename T>
+void add(Node<T> * pNode, T data)
 {
    // 0. if the list is empty, use addToHead()
    if (pNode == NULL)
@@ -116,7 +116,7 @@ void add(Node<T> * pNode, string data)
  * six items, then the valid indicies are 1..6.
  * Return pHead if no node exists there
  **********************************************/
-template <class T>
+template <typename T>
 Node<T> * findNode(Node<T> * pHead, int index)
 {
    // search through the linked list
@@ -131,7 +131,7 @@ Node<T> * findNode(Node<T> * pHead, int index)
  * DISPLAY
  * Display the contents of a linked list
  ****************************************/
-template <class T>
+template <typename T>
 ostream & operator << (ostream & out, const Node<T> * pHead)
 {
    for (const Node<T> * p = pHead; p; p = p->pNext)
@@ -143,7 +143,7 @@ ostream & operator << (ostream & out, const Node<T> * pHead)
  * EMPTY
  * Empty a linked list by deleting each Node
  ****************************************/
-template <class T>
+template <typename T>
 void empty(Node<T> * & pHead)
 {
    for (Node<T> * p = pHead; p; p = p->pNext)
@@ -155,7 +155,7 @@ void empty(Node<T> * & pHead)
  * FILL
  * Fill a linked list with user data
  ************************************/
-template <class T>
+template <typename T>
 void fill(Node<T> * & pHead)
 {
    cout << "Enter five values to put in the linked list\n";
@@ -164,7 +164,7 @@ void fill(Node<T> * & pHead)
    for (int i = 1; i <= 5; i++)
    {
       // fetch the data
-      string data;
+      T data;
       cout << "#" << i << ": ";
       cin  >> data;
 

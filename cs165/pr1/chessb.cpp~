@@ -1,0 +1,184 @@
+/***********************************************************************
+ * Program:
+ *    Project 1, Procedural Chess
+ *    Brother Comeau, CS165
+ * Author:
+ *    Keith Wheeler
+ * Summary:
+ *    This program will let two users play a game of chess
+ ************************************************************************/
+
+#include <string>      // string class used throughout
+#include <cassert>     // for asserts
+#include <iostream>    // for CIN and COUT
+#include <fstream>
+using namespace std;
+
+#define NO_PIECE '*'   // There is no piece on this location of the board
+#define INVALID 127    // invalid row or column value
+
+/********************************************
+ * COORD
+ * A single r,c coordinate
+ * Written by Br. Helfrich
+ *******************************************/
+struct Coord
+{
+   char r;   // row, from 0..7
+   char c;   // col, from 0..7
+};
+
+/*********************************************
+ * MOVE
+ * A single move, including the textual description
+ * and what it breaks down to
+ * Written by Br. Helfrich
+ ********************************************/
+struct Move
+{
+   string text;           // textual description of the move
+   char   piece;          // unknown piece
+   bool   capture;        // did a capture happen this move?
+   Coord  source;         // where the move originated from
+   Coord  dest;           // where the move finished
+   bool   enpassant;      // Enpassant pawn capture
+   bool   castleK;        // kingside castle
+   bool   castleQ;        // queenside castle
+   bool   promote;        // promote to move.piece
+};
+
+
+void moveParse();
+
+void moveDriver();
+
+
+void changeBoard();
+
+
+
+void readFile(int numMoves, string moves)
+{
+   string file;
+
+   cout << "Filename: ";
+   cin >> file;
+
+   ifstream fin(file.c_str());
+
+   if (fin.fail())
+   {
+      cout << "Unable to open file "
+           << file
+           << " for input.";
+   }
+   else
+   {
+      while (fin >> moves)
+         numMoves++;
+      fin.close();
+   }
+}
+
+
+void writeFile(int numMoves, string moves)
+{
+   string file;
+
+   cout << "To save a game, please specify the filename.\n"
+        << "\tTo quit without saving a file, just press <enter>\n";
+   cin >> file;
+
+
+   ofstream fout(file.c_str());
+
+   while (fout << moves)
+      numMoves--;
+   fout.close();
+}
+
+
+
+
+void displayBoard();
+
+void displayTest();
+
+void displayMenu()
+{
+   cout << "Options:\n"
+        << "?       Display these options\n"
+        << "b2b4    Specify a move using the Smith Notation\n"
+        << "read    Read a saved game from a file\n"
+        << "test    Simple display for test purposes\n"
+        << "quit    Leave the game. You will be prompted to save\n";
+}
+
+
+
+
+void interact()
+{
+    char board[8][8] =
+    {
+       { 'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r' },
+       { 'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p' },
+       { NO_PIECE, NO_PIECE, NO_PIECE, NO_PIECE,
+         NO_PIECE, NO_PIECE, NO_PIECE, NO_PIECE },
+       { NO_PIECE, NO_PIECE, NO_PIECE, NO_PIECE,
+         NO_PIECE, NO_PIECE, NO_PIECE, NO_PIECE },
+       { NO_PIECE, NO_PIECE, NO_PIECE, NO_PIECE,
+         NO_PIECE, NO_PIECE, NO_PIECE, NO_PIECE },
+       { NO_PIECE, NO_PIECE, NO_PIECE, NO_PIECE,
+         NO_PIECE, NO_PIECE, NO_PIECE, NO_PIECE },
+       { 'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P' },
+       { 'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R' }
+    };
+
+    int turn = 0;
+
+    string moves;
+
+    Move move;
+
+    while (move.text != string("quit"))
+    {
+       if (turn % 2 == 0)
+       {
+          cout << "White: ";
+          cin >> move.text;
+       }
+       else if (turn % 2 != 0)
+       {
+          cout << "Black: ";
+          cin >> move.text;
+       }
+    }
+    
+       for (;;)
+       {
+          if (move.text == string("?"))
+             displayMenu();
+          else if (move.text == string("read"))
+             readFile(turn, moves);
+//          else if (move.text == string("test"))
+//             displayTest();
+          else if (move.text == string("quit"))
+          {
+             writeFile(turn, moves);
+             return 0;
+          }
+       }
+    turn++;
+}
+
+
+
+/*************************
+ * Main: Drives chess
+ ************************/
+int main()
+{
+   interact();
+   return 0;
+}
