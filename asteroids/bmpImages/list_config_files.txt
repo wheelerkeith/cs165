@@ -1,0 +1,5 @@
+bmpImages/goodShip_config.txt
+bmpImages/badShip_config.txt
+bmpImages/rocks_config.txt
+bmpImages/smallShot_config.txt
+bmpImages/digits_config.txt
