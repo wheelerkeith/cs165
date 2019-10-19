@@ -8,7 +8,6 @@
  *    textbook.
  ************************************************************************/
 
-#include "ship.h"
 #include "uiDraw.h"
 #include "uiInteract.h"
 #include "point.h"
@@ -43,7 +42,6 @@ private:
    vector<Point> points;
 
    bool gameOver;
-   Ship ship;
    int rotate;
    bool up;
    bool down;
@@ -79,7 +77,6 @@ void Game :: input(const Interface & ui)
 {
    // TODO: handle user input
    
-   ship.move(ui.isUp(), ui.isDown(), ui.isLeft(), ui.isRight(), rotate);
 
    // Note that you can discover keys that were pressed by checking
    // methods such as ui.isUp(), ui.isLeft(), etc.
@@ -123,7 +120,6 @@ void Game :: input(const Interface & ui)
 void Game :: draw(const Interface & ui)
 {
     // TODO: draw anything you need to display in the game
-    ship.draw(rotate);
 
  /* // Vector example
   Point pt(-50, 0);
