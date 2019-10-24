@@ -1,97 +1,74 @@
 /***********************************************************************
  * Header File:
- *    VELOCITY: A point in motion
+ *    Point : The representation of a position on the screen
  * Author:
- *    Br. Helfrich and Br. Comeau
+ *    Br. Helfrich
  * Summary:
- *    Everything we need to know about a point in motion, including
- *    Velocity addition (additive Velocitys) and subtraction (distance)
+ *    Everything we need to know about a location on the screen, including
+ *    the location and the bounds.
  ************************************************************************/
 
-#ifndef _VELOCITY_H
-#define _VELOCITY_H
+#ifndef VELOCITY_H
+#define VELOCITY_H
 
-#define _USE_MATH_DEFINES
-#include <cmath>      // for M_PI, sin() and cos()
-#include <iostream>   // for ISTREAM and OSTREAEM
+#include <iostream>
 #include "point.h"
 
-#define M_PI 3.14
-#define deg2rad(value) ((M_PI / 180) * (value))
-#define rad2deg(value) ((value) * (180 / M_PI))
-
-/*******************************************
- * Velocity
- * A point, plus angle, plus magnitude
- ******************************************/
+/*********************************************
+ *
+ *********************************************/
 class Velocity
 {
 public:
    // constructors
-   Velocity() :       point(), dx(0.0), dy(0.0)   {               };
-   Velocity(const Velocity &rhs)                  { *this = rhs;  };
-   Velocity(float x, float y, float dx, float dy) : point(x, y), dx(dx), dy(dy) {};
+  Velocity()            : dx(0.0), dy(0.0) {dragon.setX(0.0); dragon.setY(0.0);}
+   Velocity(float x, float y, float dx, float dy);
 
    // getters
-   Point getPoint()      const;
-   float getX()          const { return point.getX();            };
-   float getY()          const { return point.getY();            };
-   float getDx()         const { return dx;                      };
-   float getDy()         const { return dy;                      };
-   float getMag()        const { return sqrt(dx * dx + dy * dy); };
-   float getAngle()      const { return rad2deg(atan2(-dy, dx)); };
-   bool getWrap()        const { return point.getWrap(); };
-   bool getCheck()       const { return point.getCheck(); };
-   bool getIsDead()      const { return isDead; };
-   
+   float getX()       const { return dragon.getX();              }
+   float getY()       const { return dragon.getY();              }
+   float getDx()      const { return dx;             }
+   float getDy()      const { return dy;             }
+   float getMag();
+   Point getPoint() const
+   {
+      return dragon;
+   }
+
    // setters
-   void setX(float x)          { point.setX(x); };
-   void setY(float y)          { point.setY(y); };
-   void addX(float x)          { point.addX(x); };
-   void addY(float y)          { point.addY(y); };
-   void setDx(float dx)        { this->dx = dx; };
-   void setDy(float dy)        { this->dy = dy; };
+   void setX(float x);
+   void setY(float y);
+   void setDx(float dx);
+   void setDy(float dy);
+   void setPoint(const Point & pt)
+   {
+      dragon = pt;
+   }
 
-   void setMag(float mag);
-   void setAngle(float angle);
-   void setVelocity(float angleDegrees, float speed);
+   friend bool operator >  (const Velocity & lhs, const float rhs);
+   friend bool operator <  (const Velocity & lhs, const float rhs);
+   friend bool operator >= (const Velocity & lhs, const float rhs);
+   friend bool operator <= (const Velocity & lhs, const float rhs);
+   friend double operator - (const Velocity & lhs, const Velocity & rhs);
+   void operator = (const Velocity & rhs);
+   void operator ++ (int postfix);
+   void operator ++ ();
+   Velocity operator + (const Velocity & v2);
+   void operator += (Velocity & v2);
 
-   void setWrap(bool wrap)	   { point.setWrap(wrap); };
-   void setCheck(bool check)   { point.setCheck(check); };
-   void setPoint(Point pt)     { point = pt; };
-   void setIsDead(bool left)   { isDead = left; };
-   bool resurrect() { return false; }
 
-   // arithemetic 
-   Velocity   operator ++ (int postfix);
-   Velocity & operator ++ ();       
-   float      operator -  (const Velocity &rhs) const;   // minimum distance
-   Velocity   operator +  (const Velocity &rhs) const;   // Velocity addition
-   Velocity & operator += ( const Velocity & rhs);
 
-   // comparision
-   bool operator == (const Velocity & rhs);
-   bool operator != (const Velocity & rhs);
-   bool operator < (const float scalar);
-   bool operator > (const float scalar);
-   bool operator <= (const float scalar);
-   bool operator >= (const float scalar);
 
-   // assignment
-   const Velocity & operator = (const Velocity & rhs);
-   const Velocity & operator = (const Point & rhs);
-   
-protected:
-   bool isDead;
-   
 private:
+   Point dragon;
    float dx;
    float dy;
-   Point point;
+   float mag;
 };
 
-// for debug purposes
-std::ostream & operator << (std::ostream & out, const Velocity & v);
-std::istream & operator >> (std::istream & in,        Velocity & v);
+// stream I/O useful for debugging
+std::ostream & operator << (std::ostream & out, const Velocity & pt);
+bool operator == (const Velocity & lhs, const Velocity & rhs);
+bool operator != (const Velocity & lhs, const Velocity & rhs);
 
-#endif
+#endif // POINT_H

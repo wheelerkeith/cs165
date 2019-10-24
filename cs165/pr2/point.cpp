@@ -120,3 +120,11 @@ std::istream & operator >> (std::istream & in, Point & pt)
    return in;
 }
    
+bool operator == (const Point & lhs, const Point & rhs)
+{
+   if (int (lhs.getX()  * 1000) == int (rhs.getX()  * 1000)&&
+       int (lhs.getY()  * 1000) == int (rhs.getY()  * 1000))
+      return true;
+   else
+      return false;
+}
