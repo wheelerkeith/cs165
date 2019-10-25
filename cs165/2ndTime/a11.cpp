@@ -23,7 +23,8 @@ using namespace std;
  ***********************************************************************/
 void getCoordinates(int & col, int & row)
 {
-   // your code goes here
+   cout << "Please enter a row and column where both are integers";
+   cin >> row >> col;
 }
 
 /***********************************************************************

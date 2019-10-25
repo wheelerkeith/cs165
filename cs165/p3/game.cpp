@@ -193,7 +193,7 @@ float Point::yMax =  300.0;
  *********************************/
 int main(int argc, char ** argv)
 {
-   Interface ui(argc, argv, "Asteroids");
+   Interface ui(argc, argv, "Hunter");
    Game game;
    ui.run(callBack, &game);
    
